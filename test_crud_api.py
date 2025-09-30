@@ -1,6 +1,9 @@
 import pytest
 import requests
+from fastapi.testclient import TestClient
+from app import app
 
+client = TestClient(app)
 BASE_URL = "http://127.0.0.1:8000/users"
 
 @pytest.fixture
